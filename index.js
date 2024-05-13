@@ -15,3 +15,21 @@ async function getImg(){
 getImg('fox')
 
 console.log(process.env.API_KEY)
+
+//// HTML & CSS 
+
+document.getElementById("searchButton").addEventListener("click", function() {
+    getImage("fox"); // Hardcoded value, you can change this to any desired search query
+});
+
+function getImage(query) {
+    // Assume getImage function fetches image URL based on the query
+    // In this example, let's just return a hardcoded URL for demonstration purposes
+    const imageURL = "https://via.placeholder.com/400"; // Placeholder image URL
+    displayImage(imageURL);
+}
+
+function displayImage(url) {
+    const imageContainer = document.getElementById("imageContainer");
+    imageContainer.innerHTML = `<img src="${}" alt="Search Result">`;
+}
